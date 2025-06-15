@@ -68,6 +68,7 @@
 } */
 
 /* *=========== Green theme =========== */
+/* TODO: 색상 설정 변경 (darkmode, lightmode 각각 설정) */
 @layer base {
   :root {
     --background: 0 0% 100%;
