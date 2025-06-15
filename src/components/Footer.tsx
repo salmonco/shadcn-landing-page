@@ -1,4 +1,4 @@
-import { SERVICE_TITLE } from "@/lib/constants";
+import { GITHUB_URL, SERVICE_TITLE } from "@/lib/constants";
 
 import { LogoDarkIcon, LogoWhiteIcon } from "@/components/Icons";
 import { useTheme } from "@/components/theme-provider";
@@ -27,8 +27,9 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href={GITHUB_URL}
               className="opacity-60 hover:opacity-100"
+              target="_blank"
             >
               Github
             </a>
