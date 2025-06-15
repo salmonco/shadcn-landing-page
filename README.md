@@ -1,4 +1,6 @@
-# Shadcn/UI Landing Page Template
+# Shadcn/UI Landing Page Template with React 18 and Vite 5
+
+This repository contains a template for building landing page with React 18, TypeScript, and Vite 5. This template is inspired by and adapted from [shadcn-landing-page](https://github.com/leoMirandaa/shadcn-landing-page).
 
 ## <a href="https://ui.shadcn.com/" target="_blank">ShadcnUI</a> + <a href="https://react.dev/" target="_blank">React</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>.
 
@@ -37,7 +39,7 @@ Build your React landing page effortlessly with the required sections to your pr
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/leoMirandaa/shadcn-landing-page.git
+git clone https://github.com/salmonco/shadcn-landing-page.git
 ```
 
 2. Go into project
@@ -49,11 +51,11 @@ cd shadcn-landing-page
 3. Install dependencies
 
 ```bash
-npm install
+yarn install
 ```
 
 4. Run project
 
 ```bash
-npm run dev
+yarn dev
 ```
