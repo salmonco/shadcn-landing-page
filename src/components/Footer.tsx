@@ -1,7 +1,11 @@
 import { SERVICE_TITLE } from "@/lib/constants";
-import { LogoIcon } from "./Icons";
+
+import { LogoDarkIcon, LogoWhiteIcon } from "@/components/Icons";
+import { useTheme } from "@/components/theme-provider";
 
 export const Footer = () => {
+  const { theme } = useTheme();
+
   return (
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
@@ -13,7 +17,7 @@ export const Footer = () => {
             href="/"
             className="font-bold text-xl flex"
           >
-            <LogoIcon />
+            {theme === "dark" ? <LogoDarkIcon /> : <LogoWhiteIcon />}
             {SERVICE_TITLE}
           </a>
         </div>

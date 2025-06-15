@@ -12,10 +12,11 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 
+import { useTheme } from "@/components/theme-provider";
 import { GITHUB_URL, SERVICE_TITLE } from "@/lib/constants";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Menu } from "lucide-react";
-import { LogoIcon } from "./Icons";
+import { LogoDarkIcon, LogoWhiteIcon } from "./Icons";
 import { ModeToggle } from "./mode-toggle";
 import { buttonVariants } from "./ui/button";
 
@@ -44,7 +45,9 @@ const routeList: RouteProps[] = [
 ];
 
 export const Navbar = () => {
+  const { theme } = useTheme();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -55,7 +58,7 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <LogoIcon />
+              {theme === "dark" ? <LogoDarkIcon /> : <LogoWhiteIcon />}
               {SERVICE_TITLE}
             </a>
           </NavigationMenuItem>
