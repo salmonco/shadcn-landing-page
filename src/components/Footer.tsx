@@ -1,3 +1,4 @@
+import { SERVICE_TITLE } from "@/lib/constants";
 import { LogoIcon } from "./Icons";
 
 export const Footer = () => {
@@ -13,7 +14,7 @@ export const Footer = () => {
             className="font-bold text-xl flex"
           >
             <LogoIcon />
-            ShadcnUI/React
+            {SERVICE_TITLE}
           </a>
         </div>
 

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,12 +10,14 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useState } from "react";
 
+import { GITHUB_URL, SERVICE_TITLE } from "@/lib/constants";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
+import { ModeToggle } from "./mode-toggle";
+import { buttonVariants } from "./ui/button";
 
 interface RouteProps {
   href: string;
@@ -55,7 +56,7 @@ export const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              ShadcnUI/React
+              {SERVICE_TITLE}
             </a>
           </NavigationMenuItem>
 
@@ -63,10 +64,7 @@ export const Navbar = () => {
           <span className="flex md:hidden">
             <ModeToggle />
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
                   className="flex md:hidden h-5 w-5"
@@ -96,7 +94,7 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+                    href={GITHUB_URL}
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",
@@ -129,7 +127,7 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+              href={GITHUB_URL}
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >

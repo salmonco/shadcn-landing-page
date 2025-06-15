@@ -1,7 +1,7 @@
-import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
-import { HeroCards } from "./HeroCards";
+import { GITHUB_URL } from "@/lib/constants";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { HeroCards } from "./HeroCards";
+import { Button, buttonVariants } from "./ui/button";
 
 export const Hero = () => {
   return (
@@ -33,7 +33,7 @@ export const Hero = () => {
 
           <a
             rel="noreferrer noopener"
-            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+            href={GITHUB_URL}
             target="_blank"
             className={`w-full md:w-1/3 ${buttonVariants({
               variant: "outline",
