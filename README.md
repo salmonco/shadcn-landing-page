@@ -12,6 +12,7 @@ Build your React landing page effortlessly with the required sections to your pr
 
 - [x] Navbar
 - [x] Sidebar(mobile)
+- [x] **CenteredHero (Newly added!)**
 - [x] Hero
 - [x] Sponsors
 - [x] About
